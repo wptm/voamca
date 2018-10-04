@@ -10,6 +10,9 @@ There's an Android app called "ebmDisplay VOAMCA", fully compatible with this fi
 http://www.wptm.hu/ebmdisplay_voamca/
 It shows up Battery voltage, current, watt and pedal cadence. Works via Bluetooth and/or USB Serial connected to display cable.
 
+Live demo:
+https://www.youtube.com/watch?v=K6m0NgTeFAM&t=337s
+
 It is based on factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
 The new features can be reached with alternative displays programmed to the changed UART message sent from motor controller.
 Only the values in the communication UART message to display are changed compared to original firmware.
