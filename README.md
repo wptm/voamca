@@ -33,7 +33,7 @@ New - battery voltage and current:
 0x82dd:	 b7 79	ld $79,A
 ```
 
-So, new VOAMCA version puts register $1F(battery voltage V=x/2.9) to $78. And it puts $1D(battery current) to $79.
+So, new VOAMCA version puts register $1F(battery voltage V=x/2.9) to $78. And it puts $1D(battery current A=x/5) to $79.
 $78 and $79 are the 4th and 5th data bytes in the communication UART to the display. 
 They originally contain the torque initial, and torque actual values. XH-18 does not show up these values, so it's still compatible with this display.
 
@@ -51,7 +51,7 @@ New - cadence value to 7A:
 ```
 
 Well, this is trickier. The original code looks up if error has occured. When not, then it clears with "clr $7a" as next instruction.
-I filled the 5 bytes with two "ld" (load) and a "ret". So, it will put cadence from register $04(pedal cadence RPM) to $7A and returns before "clr $7a" comes as next.
+I filled the 5 bytes with two "ld" (load) and a "ret". So, it will put cadence from register $04(pedal cadence RPM=2x) to $7A and returns before "clr $7a" comes as next.
 $7A is the 6th data byte in the communication UART to the display.
 This originally contains the error code (if any). XH-18 does not show up this value, so it's still compatible with this display.
 
@@ -63,8 +63,8 @@ New UART to display:
 2	0x00	Battery level
 3	0x01	Motor status flags
 4	0x78	Battery voltage(V=x/2.9)
-5	0x00	Battery current
-6	0x00	Pedal cadence(RPM)
+5	0x00	Battery current(A=x/5)
+6	0x00	Pedal cadence(RPM=2x)
 7	0x07	Speedsensor (LOW part of 16bit int)
 8	0x07	Speedsensor (HIGH part of 16bit int)
 9	0xF4	Checksum
