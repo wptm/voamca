@@ -18,16 +18,20 @@ The torque value initial and actual are replaced with battery voltage and curren
 Part voltage and current:
 -------------------------
 Original - torque initial and actual:
+```
 0x82d7:	 b6 e1	ld A, $e1
 0x82d9:	 b7 78	ld $78,A
 0x82db:	 b6 20	ld A, $20
 0x82dd:	 b7 79	ld $79,A
+```
 
 New - battery voltage and current:
+```
 0x82d7:	 b6 1F	ld A, $1F
 0x82d9:	 b7 78	ld $78,A
 0x82db:	 b6 1D	ld A, $1D
 0x82dd:	 b7 79	ld $79,A
+```
 
 So, new VOAMCA version puts register $1F(battery voltage V=x/2.9) to $78. And it puts $1D(battery current) to $79.
 $78 and $79 are the 4th and 5th data bytes in the communication UART to the display. 
@@ -37,10 +41,14 @@ They originally contain the torque initial, and torque actual values. XH-18 does
 Part cadence:
 -------------
 Original - error code lookup:
+```
 0x9f0f:	 72 08 00 8d 03	btjt $8d, #4, $9f17  (offset=3)
+```
 
 New - cadence value to 7A:
+```
 0x9f0f:	 b6 04 b7 7A 81	"ld A, $04" | "ld $7A,A" | "ret"
+```
 
 Well, this is trickier. The original code looks up if error has occured. When not, then it clears with "clr $7a" as next instruction.
 I filled the 5 bytes with two "ld" (load) and a "ret". So, it will put cadence from register $04(pedal cadence RPM) to $7A and returns before "clr $7a" comes as next.
@@ -50,6 +58,7 @@ This originally contains the error code (if any). XH-18 does not show up this va
 
 New UART to display:
 --------------------
+```
 1	0x43	Start-Byte
 2	0x00	Battery level
 3	0x01	Motor status flags
@@ -59,12 +68,12 @@ New UART to display:
 7	0x07	Speedsensor (LOW part of 16bit int)
 8	0x07	Speedsensor (HIGH part of 16bit int)
 9	0xF4	Checksum
-
+```
 
 
 Summary of changes in machine code:
 -----------------------------------
-
+```
 --- Factory default: program_memory.hex
 +++  VOAMCA version: voamca_program_memory.hex
 @@ -20,7 +20,7 @@
@@ -85,3 +94,4 @@ Summary of changes in machine code:
  :209F20008D70720F526D6D720A008F55720000891D720C008F36720000932F720A008D2A55
  :209F40002061B6FBA1852566721900942055B61FB1A2255AB6A4A1042404A604B7A43CA4D7
  :209F6000721100897219008F20392042B65AA155243C7204008A377219008A721D008F2010
+```
