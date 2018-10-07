@@ -1,5 +1,5 @@
 # voamca
-VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version
+VOAMCA (Voltage Ampere Cadence) TSDZ2 36v firmware version
 
 Limited warranty: "VOAMCA (Voltage Ampere Cadence) TSDZ2 36v firmware version" and documentation are "as is" without any warranty. The licensee assumes the entire risk as to the quality and performance of the software. In no event shall "VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version" or anyone else who has been involved in the creation, development, production, or delivery of this software be liable for any direct, incidental or consequential damages, such as, but not limited to, loss of anticipated profits, benefits, use, or data resulting from the use of this software, or arising out of any breach of warranty.
 
