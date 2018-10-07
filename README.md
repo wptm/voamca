@@ -1,7 +1,7 @@
 # voamca
 VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version
 
-Limited warranty: "VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version" and documentation are "as is" without any warranty. The licensee assumes the entire risk as to the quality and performance of the software. In no event shall "VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version" or anyone else who has been involved in the creation, development, production, or delivery of this software be liable for any direct, incidental or consequential damages, such as, but not limited to, loss of anticipated profits, benefits, use, or data resulting from the use of this software, or arising out of any breach of warranty.
+Limited warranty: "VOAMCA (Voltage Ampere Cadence) TSDZ2 36v firmware version" and documentation are "as is" without any warranty. The licensee assumes the entire risk as to the quality and performance of the software. In no event shall "VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version" or anyone else who has been involved in the creation, development, production, or delivery of this software be liable for any direct, incidental or consequential damages, such as, but not limited to, loss of anticipated profits, benefits, use, or data resulting from the use of this software, or arising out of any breach of warranty.
 
 Based on ideas from casainho and hurzhurz found here:
 https://endless-sphere.com/forums/viewtopic.php?f=28&t=94351&hilit=TSDZ2
@@ -13,7 +13,7 @@ It shows up Battery voltage, current, watt and pedal cadence. Works via Bluetoot
 Live demo:
 https://www.youtube.com/watch?v=K6m0NgTeFAM&t=337s
 
-It is based on factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
+It is based on 36v factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
 The new features can be reached with alternative displays programmed to the changed UART message sent from motor controller.
 Only the values in the communication UART message to display are changed compared to original firmware.
 The torque value initial and actual are replaced with battery voltage and current. The error code is replaced with pedal cadence.
