@@ -69,7 +69,7 @@ Original - puts decimal 10 to assist level 0.5 (hidden) value int.:
 0x9b99:	 a6 0a	ld A, #$0a
 ```
 
-New - puts register $80 as assist level value. Register $80 is the 3rd value in the communication UART message to motor controller:
+New - puts register $80 as assist level 0.5 (hidden) value. Register $80 is the 3rd value in the communication UART message to motor controller:
 ```
 0x9b99:	 b6 80	ld A, $80
 ```
