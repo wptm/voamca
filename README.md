@@ -16,10 +16,10 @@ https://www.youtube.com/watch?v=K6m0NgTeFAM&t=337s
 It is based on factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
 The new features can be reached with alternative displays programmed to the changed UART messages between motor controller and display.
 There are changes compared to original factory default firmware:
-```
+
 -values in the communication UART message to display (Torque value initial and actual are replaced by battery voltage and current. The error code is replaced by pedal cadence.)
+
 -one value in the communication UART message to motor (The 3rd value which is unused by the firmware is replaced by firm assist level value. It should not be higher then 50 or 0x32.)
-```
 
 Part voltage and current:
 -------------------------
