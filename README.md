@@ -11,6 +11,7 @@ http://www.wptm.hu/ebmdisplay_voamca/
 It shows up Battery voltage, current, watt and pedal cadence. And it is able to set assist between level 1-3 firmly. Works via Bluetooth and/or USB Serial connected to display cable.
 
 Live demo:
+https://www.youtube.com/watch?v=MRNlK_30TOA
 https://www.youtube.com/watch?v=K6m0NgTeFAM&t=337s
 
 It is based on factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
