@@ -6,15 +6,6 @@ Limited warranty: "VOAMCA (Voltage Ampere Cadence) TSDZ2 firmware version" and d
 Based on ideas from casainho and hurzhurz found here:
 https://endless-sphere.com/forums/viewtopic.php?f=28&t=94351&hilit=TSDZ2
 
-There's an Android app called "ebmDisplay VOAMCA", fully compatible with this firmware:
-http://www.wptm.hu/ebmdisplay_voamca/
-It shows up Battery voltage, current, watt and pedal cadence. And it is able to set assist between level 1-3 firmly. Works via Bluetooth and/or USB Serial connected to display cable.
-
-Live demo:
-https://www.youtube.com/watch?v=MRNlK_30TOA
-
-https://www.youtube.com/watch?v=K6m0NgTeFAM&t=337s
-
 It is based on factory default firmware. And it is aimed to be compatible with displays used with TSDZ2.
 The new features can be reached with alternative displays programmed to the changed UART messages between motor controller and display.
 There are changes compared to original factory default firmware:
