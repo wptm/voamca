@@ -101,7 +101,7 @@ New UART to motor:
 2	0x40	Motor control flags
 3	0x28	Firm assist level value (max. 0x32)
 4	0x1C	Wheel size
-5	0x00	Walk assist RPM. Should not be 0xAA(170) because this value activates unknown function.
+5	0x00	Walk assist RPM. (max. 0xA9(169)). Should not be 0xAA(170) because this value activates unknown function.
 6	0x1B	Maximum speed
 7	0xD0	Checksum
 ```
