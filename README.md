@@ -12,7 +12,7 @@ There are changes compared to original factory default firmware:
 
 -values in the communication UART message to display (Torque value initial and actual are replaced by battery voltage and current. The error code is replaced by pedal cadence.)
 
--one value in the communication UART message to motor (The 3rd value which is unused by the firmware is replaced by firm assist level value. It should not be higher then 50 or 0x32.)
+-two values in the communication UART message to motor (The 3rd value which is unused by the firmware is replaced by firm assist level value. It should not be higher then 50 or 0x32.) (And the 5th value which has an unknown functionality that is only activated if value 0xAA(170) is sent. So it is wise to avoid sending 0xAA(170) there.)
 
 Part voltage and current:
 -------------------------
